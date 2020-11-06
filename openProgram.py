@@ -1,13 +1,6 @@
 import os
-import webbrowser
+from selenium import webdriver
 
-
-def openBrave():
-    url = 'https://oldschool.runescape.wiki/w/Graceful_outfit'
-    webbrowser.register('brave', None, webbrowser.BackgroundBrowser(
-        "C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\Brave.exe"))
-    # os.startfile('brave.exe')
-    webbrowser.get('brave').open(url)
-
-
-openBrave()
+driver = webdriver.Chrome(
+    "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+driver.get('http://www.amazon.com')
